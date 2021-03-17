@@ -2,7 +2,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class FootbalTeam {
+public class FootballTeam {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -13,6 +13,7 @@ public class FootbalTeam {
 
             int number = Integer.parseInt(scanner.nextLine());
 
+            // Tách các chữ số
             int defender = number / 100;
             int midfielder = (number - defender * 100) / 10;
             int forwarder = (int) number % 10;
@@ -34,8 +35,8 @@ public class FootbalTeam {
         }
     }
 
+    // Hàm đọc thông tin cầu thủ từ file
     public static Team readRecordsFromFile(String file) {
-
         Team teams = new Team();
 
         try (Scanner inputFile = new Scanner(Paths.get(file))) {

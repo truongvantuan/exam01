@@ -17,6 +17,7 @@ public class Team {
 
     }
 
+    // Hàm buildTeam mặc định cho đội hình 442
     public ArrayList<Player> buildTeam() {
         ArrayList<Player> team = new ArrayList<>();
 
@@ -33,6 +34,7 @@ public class Team {
         return team;
     }
 
+    // Hàm buildTeam cho đội hình tùy chọn
     public ArrayList<Player> buildTeam(int defender, int midfielder, int forwarder) {
         ArrayList<Player> team = new ArrayList<>();
 
@@ -49,6 +51,7 @@ public class Team {
         return team;
     }
 
+    // Hàm chọn ngẫu nhiên cầu thủ thừ danh sách
     public ArrayList<Player> getRandomPlayer(ArrayList<Player> list, int totalPlayer) {
         Random rand = new Random();
         ArrayList<Player> newList = new ArrayList<>();
@@ -56,7 +59,7 @@ public class Team {
         for (int i = 0; i < totalPlayer; i++) {
             int randomIndex = rand.nextInt(list.size());
             newList.add(list.get(randomIndex));
-            list.remove(randomIndex);
+            list.remove(randomIndex); // Cầu thủ sau khi đã chọn được loại bỏ khởi dánh sách tránh lặp lại
         }
 
         return newList;
