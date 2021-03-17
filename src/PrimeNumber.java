@@ -3,7 +3,7 @@ import java.util.Scanner;
 // import java.io.FileWriter;
 // import java.io.IOException;
 
-public class App {
+public class PrimeNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         // File outFile = new File("nguyento.txt");

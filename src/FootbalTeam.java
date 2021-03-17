@@ -2,14 +2,14 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class App {
+public class FootbalTeam {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
             Team team = readRecordsFromFile("players.txt");
 
-            System.out.println("Chọn đội hình ra sân: (442 - 352 - 433)");
+            System.out.print("Chọn đội hình ra sân (442 - 352 - 433): ");
 
             int number = Integer.parseInt(scanner.nextLine());
 
