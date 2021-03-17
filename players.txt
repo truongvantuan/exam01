@@ -1,0 +1,22 @@
+1 - Marc-André ter Stegen - GK
+2 - Sergiño Dest - DF
+3 - Gerard Piqué - DF
+4 - Ronald Araújo - DF
+5 - Sergio Busquets - MF
+6 - Antoine Griezmann - FW
+7 - Miralem Pjanić - MF
+8 - Martin Braithwaite - FW
+9 - Lionel Messi - FW
+10 - Ousmane Dembélé - FW
+11 - Riqui Puig - MF
+12 - Neto - GK
+13 - Clément Lenglet - DF
+14 - Pedri - MF
+15 - Francisco Trincão - FW
+16 - Jordi Alba - DF
+17 - Matheus Fernandes - MF
+18 - Sergi Roberto - DF
+19 - Frenkie de Jong - MF
+20 - Ansu Fati - FW
+21 - Samuel Umtiti - DF
+22 - Junior Firpo - DF
