@@ -1,12 +1,13 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
-// import java.io.File;
-// import java.io.FileWriter;
-// import java.io.IOException;
-
 public class PrimeNumber {
+    private static String outPut;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // File outFile = new File("nguyento.txt");
+        File outFile = new File("nguyento.txt");
 
         while (true) {
             String input = scanner.nextLine();
@@ -16,18 +17,25 @@ public class PrimeNumber {
             }
 
             if (!isNumeric(input)) {
-                System.out.println(input + " không phải là số");
+                String outPut = input + " không phải là số";
+                System.out.println(outPut);
                 continue;
             }
 
             int number = Integer.parseInt(input);
 
             if (number == 0 || number == 1) {
-                System.out.println(number + " không phải là số nguyên tố");
+                String outPut = number + " không phải là số nguyên tố";
+                writeToFile(outPut, outFile);
+                System.out.println(outPut);
             } else if (isPrimeNumber(number)) {
-                System.out.println(number + " là số nguyên tố");
+                String outPut = number + " là số nguyên tố";
+                writeToFile(outPut, outFile);
+                System.out.println(outPut);
             } else {
-                System.out.println(number + " không phải là số nguyên tố");
+                outPut = number + " không phải là số nguyên tố";
+                writeToFile(outPut, outFile);
+                System.out.println(outPut);
             }
 
         }
@@ -51,7 +59,21 @@ public class PrimeNumber {
         return true;
     }
 
-    // public static void writeToFile(File) {
-
-    // }
+    private static void writeToFile(String data, File outFile) {
+        File file = new File(outFile.toString());
+        FileWriter fr = null;
+        try {
+            fr = new FileWriter(file);
+            fr.write(data);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            // close resources
+            try {
+                fr.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
